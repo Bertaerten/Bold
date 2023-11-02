@@ -45,7 +45,7 @@ public void setup() {
     }
 
     public void draw() {
-        
+
 //background (0);
 // set retningen og størrelsen af luftmodstanden
 aLuft.set(boldVel.x, boldVel.y);
