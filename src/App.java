@@ -49,22 +49,22 @@ public void setup() {
 //background (0);
 // set retningen og størrelsen af luftmodstanden
 aLuft.set(boldVel.x, boldVel.y);
-aLuft.setMag(-0.5*rho*A*Cd*boldVel.magSq()/mass);
+aLuft.setMag(-0.5f*rho*A*Cd*boldVel.magSq()/mass);
 
 float v = boldVel.mag();
 aM.set(boldVel.y, -boldVel.x);
 //aM.setMag(-0.5*CA*rho*A*(sq(v-2*PI*r*rps)-sq(v+2*PI*r*rps))/mass);
-aM.setMag(-0.5*CA*rho*A*(-8*PI*rps*r*v)/mass);
+aM.setMag(-0.5f*CA*rho*A*(-8*PI*rps*r*v)/mass);
 
 //reducer spinraten
-rps = rps * 0.993;
+rps = rps * 0.993f;
 
 //boldens acceleration er summen af de gældende accelerationen
 boldAcc.add(ag);
 boldAcc.add(aLuft);
 boldAcc.add(aM);
 
-boldAcc.mult(0.03333);
+boldAcc.mult(0.03333f);
 
 
 
