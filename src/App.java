@@ -4,12 +4,11 @@ import processing.core.PVector;
 public class App extends PApplet {
 
     public static void main(String[] args) {
-        PApplet.main("Bold");
+        PApplet.main("App");
     }
 
     public void settings() {
     size (1600, 600);
-    frameRate (30);
     }
 
 PVector bold;
@@ -20,19 +19,21 @@ PVector ag;
 PVector aLuft;
 PVector aM;
 
-final float g = (float) 9.82;
-final float rho = (float) 1.29;
+final float g = 9.82f;
+final float rho = 1.29f;
 
-final float mass= (float) 0.05;
-final float r= (float) 0.02;
+final float mass=  0.05f;
+final float r=  0.02f;
 final float A = PI * sq(r);
-final float Cd = (float) 0.47;
-final float CA = (float) 0.3;
+final float Cd =  0.47f;
+final float CA =  0.3f;
 float rps;
 
 
 public void setup() {
     background(0);
+    frameRate (30);
+
     bold = new PVector(0, 600);
     boldVel = new PVector(20, -10);
     boldAcc = new PVector(0, 0);
@@ -59,7 +60,7 @@ aM.setMag(-0.5f*CA*rho*A*(-8*PI*rps*r*v)/mass);
 //reducer spinraten
 rps = rps * 0.993f;
 
-//boldens acceleration er summen af de gældende accelerationen
+//boldens acceleration er summen af de gældende accelerationer
 boldAcc.add(ag);
 boldAcc.add(aLuft);
 boldAcc.add(aM);
