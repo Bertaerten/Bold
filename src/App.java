@@ -42,7 +42,7 @@ public void setup() {
     aLuft = new PVector(0, 0);
     aM = new PVector(0, 0);
 
-    rps = 200;
+    rps = 10000;
     }
 
     public void draw() {
