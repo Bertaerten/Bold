@@ -78,6 +78,10 @@ bold.add(boldVel);
 //tegn bolden
 circle(bold.x, bold.y, 10);
 
+
+println(rps);
+
+
 boldAcc.set(0,0);
 
 
